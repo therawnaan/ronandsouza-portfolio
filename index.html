@@ -252,44 +252,189 @@
     .footer__top { background: none; border: 1px solid var(--border); border-radius: 100px; padding: 7px 16px; font-size: 12px; font-weight: 600; color: var(--text-2); transition: background .2s, color .2s; }
     .footer__top:hover { background: var(--bg-dark); color: var(--text-inv); }
 
-    /* ── RESPONSIVE ── */
-    @media(max-width:960px) {
+    /* ════════════════════════════════════════
+       RESPONSIVE — TABLET (≤ 960px)
+    ════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      /* Nav */
       .nav { padding: 16px 24px; }
       .nav.stuck { padding: 12px 24px; }
       .nav__menu { display: none; }
       .nav__burger { display: flex; }
       .nav__cta { display: none; }
-      .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; text-align: center; }
-      .hero__label { justify-content: center; }
+
+      /* Hero */
+      .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 110px 24px 60px;
+        text-align: center;
+        gap: 0;
+        min-height: auto;
+      }
+      .hero__label { justify-content: center; margin-bottom: 24px; }
+      .hero__headline { grid-column: 1; margin-bottom: 32px; align-items: center; }
+      .hero__line--1 { font-size: clamp(68px, 18vw, 120px); }
       .hero__line--2 { justify-content: center; }
-      .hero__right { align-items: center; }
-      .hero__bio { text-align: left; }
-      .hero__scroll { justify-content: center; }
+      .hero__serif { font-size: clamp(48px, 13vw, 90px); }
+      .hero__right { grid-column: 1; align-items: center; gap: 24px; }
+      .hero__bio { text-align: left; font-size: 15px; max-width: 100%; }
+      .hero__actions { justify-content: center; }
+      .hero__stats { gap: 24px; justify-content: center; padding-top: 20px; }
+      .hero__stat b { font-size: 30px; }
+      .hero__scroll { grid-column: 1; justify-content: center; padding-top: 40px; }
       .hero__shape { display: none; }
-      .about { grid-template-columns: 1fr; padding: 80px 24px; gap: 48px; }
+
+      /* About */
+      .about {
+        grid-template-columns: 1fr;
+        padding: 80px 24px;
+        gap: 48px;
+      }
       .about__img-col { display: flex; justify-content: center; }
-      .about__img-frame { max-width: 280px; }
+      .about__img-frame { max-width: 260px; width: 100%; }
       .about__tag { right: 0; }
-      /* Timeline mobile */
+      .about__text-col p { max-width: 100%; }
+
+      /* Timeline */
       .timeline-section { padding: 80px 24px; }
+      .timeline-section__header { margin-bottom: 48px; }
       .timeline::before { left: 0; }
-      .tl-item { grid-template-columns: 1fr; padding-bottom: 40px; padding-left: 24px; }
-      .tl-dot { left: -7px; }
-      .tl-date { text-align: left; padding-right: 0; margin-bottom: 8px; }
-      .skills { grid-template-columns: 1fr; padding: 80px 24px; gap: 40px; }
+      .tl-item {
+        grid-template-columns: 1fr;
+        padding-bottom: 40px;
+        padding-left: 24px;
+      }
+      .tl-dot { left: -7px; top: 4px; }
+      .tl-date { text-align: left; padding-right: 0; margin-bottom: 10px; padding-top: 0; }
+      .tl-date__range { font-size: 12px; }
+      .tl-card { padding: 20px; }
+      .tl-card__title { font-size: 19px; }
+
+      /* Skills */
+      .skills {
+        grid-template-columns: 1fr;
+        padding: 80px 24px;
+        gap: 40px;
+      }
+      .skill-row { grid-template-columns: 130px 1fr 38px; gap: 12px; padding: 12px 14px; }
+
+      /* Photography */
       .photo { padding: 80px 24px; }
       .photo__layout { grid-template-columns: 1fr; gap: 40px; }
-      .photo__gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+      .photo__stats { gap: 24px; }
+      .photo__gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+      }
+      /* Flatten tall/wide spans on tablet to keep grid clean */
       .photo__tile--tall { grid-row: span 1; }
+      .photo__tile--wide { grid-column: span 2; }
       .photo__footer { flex-direction: column; align-items: flex-start; }
-      .contact { padding: 80px 24px; }
-      .contact__deco { font-size: 80px; right: -20px; bottom: -30px; }
+
+      /* Contact */
+      .contact { padding: 80px 24px 60px; }
+      .contact__sub { font-size: 15px; margin-bottom: 32px; max-width: 100%; }
+      .contact__email { font-size: clamp(16px, 4vw, 24px); word-break: break-all; }
+      .contact__deco { font-size: clamp(60px, 14vw, 120px); right: -16px; bottom: -24px; }
+
+      /* Footer */
       .footer { padding: 20px 24px; flex-direction: column; text-align: center; }
     }
-    @media(max-width:500px) {
+
+    /* ════════════════════════════════════════
+       RESPONSIVE — MOBILE (≤ 500px)
+    ════════════════════════════════════════ */
+    @media (max-width: 500px) {
       body { cursor: auto; }
       .cur { display: none; }
-      .skill-row { grid-template-columns: 120px 1fr 36px; }
+
+      /* Nav */
+      .nav { padding: 14px 16px; }
+      .nav.stuck { padding: 10px 16px; }
+      .nav__brand { font-size: 22px; }
+
+      /* Hero */
+      .hero { padding: 90px 16px 48px; }
+      .hero__line--1 { font-size: clamp(56px, 20vw, 80px); }
+      .hero__serif { font-size: clamp(40px, 15vw, 60px); }
+      .hero__bio { font-size: 14px; }
+      .hero__actions { flex-direction: column; align-items: center; width: 100%; }
+      .hero__actions .btn { width: 100%; justify-content: center; }
+      .hero__stats { gap: 16px; flex-wrap: wrap; justify-content: center; }
+      .hero__stat { text-align: center; min-width: 60px; }
+      .hero__stat b { font-size: 26px; }
+      .hero__scroll { padding-top: 32px; }
+
+      /* About */
+      .about { padding: 60px 16px; gap: 36px; }
+      .about__img-frame { max-width: 220px; }
+      .about__tag { font-size: 11px; padding: 6px 12px; right: -4px; }
+      .about__heading { font-size: clamp(36px, 10vw, 52px); }
+      .about__facts { padding: 14px; }
+      .about__fact { font-size: 13px; }
+
+      /* Timeline */
+      .timeline-section { padding: 60px 16px; }
+      .tl-item { padding-left: 20px; padding-bottom: 32px; }
+      .tl-card { padding: 16px; border-radius: 12px; }
+      .tl-card__title { font-size: 17px; }
+      .tl-card__org { font-size: 12px; }
+      .tl-card__desc { font-size: 13px; }
+      .tl-card__tag { font-size: 10px; padding: 2px 8px; }
+      .tl-card__top { flex-direction: column; gap: 8px; }
+      .tl-card__type { align-self: flex-start; }
+
+      /* Skills */
+      .skills { padding: 60px 16px; gap: 32px; }
+      .skills__sub { max-width: 100%; font-size: 14px; margin-bottom: 28px; }
+      .skill-row { grid-template-columns: 1fr 42px; gap: 8px; padding: 12px 14px; }
+      .skill-row__name { grid-column: 1; grid-row: 1; font-size: 13px; }
+      .skill-row__track { grid-column: 1; grid-row: 2; }
+      .skill-row__pct { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+
+      /* Photography */
+      .photo { padding: 60px 16px; }
+      .photo__heading { font-size: clamp(40px, 12vw, 64px); }
+      .photo__text p { font-size: 14px; }
+      .photo__stats { gap: 20px; flex-wrap: wrap; }
+      .photo__stat b { font-size: 32px; }
+      .photo__gear-item { font-size: 13px; padding: 10px 12px; }
+      .photo__gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+        gap: 8px;
+      }
+      /* On small screens drop all spanning — every tile is equal */
+      .photo__tile--wide { grid-column: span 1; }
+      .photo__tile--tall { grid-row: span 1; }
+      .photo__tile { border-radius: 8px; }
+      .photo__footer { gap: 10px; }
+      .photo__ig { font-size: 12px; padding: 8px 14px; }
+
+      /* Contact */
+      .contact { padding: 60px 16px 48px; }
+      .contact__heading { font-size: clamp(44px, 14vw, 72px); }
+      .contact__sub { font-size: 14px; margin-bottom: 28px; }
+      .contact__email { font-size: clamp(13px, 4.5vw, 18px); gap: 8px; margin-bottom: 32px; word-break: break-all; }
+      .contact__links { gap: 20px; }
+      .contact__deco { font-size: clamp(44px, 16vw, 80px); right: -12px; bottom: -16px; }
+      .resume__cont { margin-top: 12px; }
+
+      /* Footer */
+      .footer { padding: 18px 16px; gap: 10px; }
+
+      /* Overlay nav */
+      .nav__overlay .nav__link { font-size: clamp(24px, 8vw, 36px); }
+    }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE — VERY SMALL (≤ 360px)
+    ════════════════════════════════════════ */
+    @media (max-width: 360px) {
+      .hero__line--1 { font-size: 52px; }
+      .hero__serif { font-size: 38px; }
+      .contact__email { font-size: 13px; }
     }
   </style>
 </head>
@@ -318,11 +463,6 @@
 
   <!-- Mobile overlay -->
   <div class="nav__overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Navigation">
-    <button class="nav__close" id="navClose" aria-label="Close menu">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
-        <path d="M18 6L6 18M6 6l12 12" stroke="#111110" />
-      </svg>
-    </button>
     <a href="#about" class="nav__link">About</a>
     <a href="#experience" class="nav__link">Experience</a>
     <a href="#skills" class="nav__link">Skills</a>
@@ -609,44 +749,37 @@
           <span class="photo__tile-label">Candid</span>
         </div>
 
-        <!-- ─── HIDDEN (show more) ─── Replace src, remove class="hidden" when ready ─── -->
-
-        <!-- ⑧ -->
+        <!-- ─── HIDDEN (show more) ─── -->
         <div class="photo__tile hidden">
           <img src="./media/000841960022 (1).jpg" alt="Sample photo 8" loading="lazy" />
           <span class="photo__tile-label">Film</span>
         </div>
 
-        <!-- ⑨ -->
         <div class="photo__tile photo__tile--wide hidden">
           <img src="./media/000806240019.jpg" alt="Sample photo 9" loading="lazy" />
           <span class="photo__tile-label">Nature</span>
         </div>
 
-        <!-- ⑩ -->
         <div class="photo__tile hidden">
           <img src="./media/000847410033.jpg" alt="Street photo 10" loading="lazy" />
           <span class="photo__tile-label">Street</span>
         </div>
 
-        <!-- ⑧ -->
         <div class="photo__tile photo__tile--wide photo__tile--tall hidden">
           <img src="./media/000847410024.jpg" alt="Sample photo 8" loading="lazy" />
           <span class="photo__tile-label">Film</span>
         </div>
 
-        <!-- ⑨ -->
         <div class="photo__tile photo__tile--tall hidden">
           <img src="./media/000873830010 (1).jpg" alt="Sample photo 9" loading="lazy" />
           <span class="photo__tile-label">Nature</span>
         </div>
 
-        <!-- ⑩ -->
         <div class="photo__tile hidden">
           <img src="./media/000873830002 (1).jpg" alt="Street photo 10" loading="lazy" />
           <span class="photo__tile-label">Street</span>
         </div>
-         <!-- ⑩ -->
+
         <div class="photo__tile hidden">
           <img src="./media/000873810015 (1).jpg" alt="Street photo 10" loading="lazy" />
           <span class="photo__tile-label">Street</span>
@@ -690,13 +823,11 @@
   <!-- FOOTER -->
   <footer class="footer">
     <span>© 2025 Ronan Dsouza</span>
-    <!-- <span data-key="footerBuilt">Built with HTML, CSS &amp; JS ✦</span> -->
     <button class="footer__top" id="backToTop" data-key="footerTop">↑ Top</button>
   </footer>
 
   <script>
     'use strict';
-
 
     /* ── TRANSLATIONS ── */
     const T = {
@@ -828,12 +959,11 @@
     const navEl = document.getElementById('nav');
     const burger = document.getElementById('burger');
     const overlay = document.getElementById('navOverlay');
-    const navClose = document.getElementById('navClose');
     const openMenu = () => { overlay.classList.add('open'); burger.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
     const closeMenu = () => { overlay.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; };
+    const toggleMenu = () => overlay.classList.contains('open') ? closeMenu() : openMenu();
     window.addEventListener('scroll', () => navEl.classList.toggle('stuck', scrollY > 50), { passive: true });
-    burger.addEventListener('click', openMenu);
-    navClose.addEventListener('click', closeMenu);
+    burger.addEventListener('click', toggleMenu);
     overlay.querySelectorAll('.nav__link').forEach(a => a.addEventListener('click', closeMenu));
 
     /* ── BACK TO TOP ── */
@@ -858,7 +988,7 @@
         } else {
           hidden.forEach(t => t.classList.add('hidden'));
           showMoreBtn.classList.remove('expanded');
-          showMoreBtn.innerHTML = 'Show 3 more <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>';
+          showMoreBtn.innerHTML = 'Show more <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>';
         }
       });
     }
@@ -866,8 +996,6 @@
     /* ── BOOT ── */
     renderSkillCats(); renderSkillBars();
     requestAnimationFrame(() => { observe(); setTimeout(observe, 200); });
-
-
   </script>
 </body>
 </html>
