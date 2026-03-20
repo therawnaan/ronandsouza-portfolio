@@ -256,22 +256,12 @@
        RESPONSIVE — TABLET (≤ 960px)
     ════════════════════════════════════════ */
     @media (max-width: 960px) {
-      /* Nav */
       .nav { padding: 16px 24px; }
       .nav.stuck { padding: 12px 24px; }
       .nav__menu { display: none; }
       .nav__burger { display: flex; }
       .nav__cta { display: none; }
-
-      /* Hero */
-      .hero {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        padding: 110px 24px 60px;
-        text-align: center;
-        gap: 0;
-        min-height: auto;
-      }
+      .hero { grid-template-columns: 1fr; grid-template-rows: auto; padding: 110px 24px 60px; text-align: center; gap: 0; min-height: auto; }
       .hero__label { justify-content: center; margin-bottom: 24px; }
       .hero__headline { grid-column: 1; margin-bottom: 32px; align-items: center; }
       .hero__line--1 { font-size: clamp(68px, 18vw, 120px); }
@@ -284,61 +274,33 @@
       .hero__stat b { font-size: 30px; }
       .hero__scroll { grid-column: 1; justify-content: center; padding-top: 40px; }
       .hero__shape { display: none; }
-
-      /* About */
-      .about {
-        grid-template-columns: 1fr;
-        padding: 80px 24px;
-        gap: 48px;
-      }
+      .about { grid-template-columns: 1fr; padding: 80px 24px; gap: 48px; }
       .about__img-col { display: flex; justify-content: center; }
       .about__img-frame { max-width: 260px; width: 100%; }
       .about__tag { right: 0; }
       .about__text-col p { max-width: 100%; }
-
-      /* Timeline */
       .timeline-section { padding: 80px 24px; }
       .timeline-section__header { margin-bottom: 48px; }
       .timeline::before { left: 0; }
-      .tl-item {
-        grid-template-columns: 1fr;
-        padding-bottom: 40px;
-        padding-left: 24px;
-      }
+      .tl-item { grid-template-columns: 1fr; padding-bottom: 40px; padding-left: 24px; }
       .tl-dot { left: -7px; top: 4px; }
       .tl-date { text-align: left; padding-right: 0; margin-bottom: 10px; padding-top: 0; }
       .tl-date__range { font-size: 12px; }
       .tl-card { padding: 20px; }
       .tl-card__title { font-size: 19px; }
-
-      /* Skills */
-      .skills {
-        grid-template-columns: 1fr;
-        padding: 80px 24px;
-        gap: 40px;
-      }
+      .skills { grid-template-columns: 1fr; padding: 80px 24px; gap: 40px; }
       .skill-row { grid-template-columns: 130px 1fr 38px; gap: 12px; padding: 12px 14px; }
-
-      /* Photography */
       .photo { padding: 80px 24px; }
       .photo__layout { grid-template-columns: 1fr; gap: 40px; }
       .photo__stats { gap: 24px; }
-      .photo__gallery {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 180px;
-      }
-      /* Flatten tall/wide spans on tablet to keep grid clean */
+      .photo__gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
       .photo__tile--tall { grid-row: span 1; }
       .photo__tile--wide { grid-column: span 2; }
       .photo__footer { flex-direction: column; align-items: flex-start; }
-
-      /* Contact */
       .contact { padding: 80px 24px 60px; }
       .contact__sub { font-size: 15px; margin-bottom: 32px; max-width: 100%; }
       .contact__email { font-size: clamp(16px, 4vw, 24px); word-break: break-all; }
       .contact__deco { font-size: clamp(60px, 14vw, 120px); right: -16px; bottom: -24px; }
-
-      /* Footer */
       .footer { padding: 20px 24px; flex-direction: column; text-align: center; }
     }
 
@@ -348,13 +310,9 @@
     @media (max-width: 500px) {
       body { cursor: auto; }
       .cur { display: none; }
-
-      /* Nav */
       .nav { padding: 14px 16px; }
       .nav.stuck { padding: 10px 16px; }
       .nav__brand { font-size: 22px; }
-
-      /* Hero */
       .hero { padding: 90px 16px 48px; }
       .hero__line--1 { font-size: clamp(56px, 20vw, 80px); }
       .hero__serif { font-size: clamp(40px, 15vw, 60px); }
@@ -365,16 +323,12 @@
       .hero__stat { text-align: center; min-width: 60px; }
       .hero__stat b { font-size: 26px; }
       .hero__scroll { padding-top: 32px; }
-
-      /* About */
       .about { padding: 60px 16px; gap: 36px; }
       .about__img-frame { max-width: 220px; }
       .about__tag { font-size: 11px; padding: 6px 12px; right: -4px; }
       .about__heading { font-size: clamp(36px, 10vw, 52px); }
       .about__facts { padding: 14px; }
       .about__fact { font-size: 13px; }
-
-      /* Timeline */
       .timeline-section { padding: 60px 16px; }
       .tl-item { padding-left: 20px; padding-bottom: 32px; }
       .tl-card { padding: 16px; border-radius: 12px; }
@@ -384,35 +338,24 @@
       .tl-card__tag { font-size: 10px; padding: 2px 8px; }
       .tl-card__top { flex-direction: column; gap: 8px; }
       .tl-card__type { align-self: flex-start; }
-
-      /* Skills */
       .skills { padding: 60px 16px; gap: 32px; }
       .skills__sub { max-width: 100%; font-size: 14px; margin-bottom: 28px; }
       .skill-row { grid-template-columns: 1fr 42px; gap: 8px; padding: 12px 14px; }
       .skill-row__name { grid-column: 1; grid-row: 1; font-size: 13px; }
       .skill-row__track { grid-column: 1; grid-row: 2; }
       .skill-row__pct { grid-column: 2; grid-row: 1 / 3; align-self: center; }
-
-      /* Photography */
       .photo { padding: 60px 16px; }
       .photo__heading { font-size: clamp(40px, 12vw, 64px); }
       .photo__text p { font-size: 14px; }
       .photo__stats { gap: 20px; flex-wrap: wrap; }
       .photo__stat b { font-size: 32px; }
       .photo__gear-item { font-size: 13px; padding: 10px 12px; }
-      .photo__gallery {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 150px;
-        gap: 8px;
-      }
-      /* On small screens drop all spanning — every tile is equal */
+      .photo__gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; gap: 8px; }
       .photo__tile--wide { grid-column: span 1; }
       .photo__tile--tall { grid-row: span 1; }
       .photo__tile { border-radius: 8px; }
       .photo__footer { gap: 10px; }
       .photo__ig { font-size: 12px; padding: 8px 14px; }
-
-      /* Contact */
       .contact { padding: 60px 16px 48px; }
       .contact__heading { font-size: clamp(44px, 14vw, 72px); }
       .contact__sub { font-size: 14px; margin-bottom: 28px; }
@@ -420,11 +363,7 @@
       .contact__links { gap: 20px; }
       .contact__deco { font-size: clamp(44px, 16vw, 80px); right: -12px; bottom: -16px; }
       .resume__cont { margin-top: 12px; }
-
-      /* Footer */
       .footer { padding: 18px 16px; gap: 10px; }
-
-      /* Overlay nav */
       .nav__overlay .nav__link { font-size: clamp(24px, 8vw, 36px); }
     }
 
@@ -540,9 +479,9 @@
       <p data-key="aboutP1">I have 2 years of professional experience building production software — working across frontend development, design systems, and shipping real features to real users. My graphic design background means I care deeply about both how things work and how they look.</p>
       <p data-key="aboutP2">On top of that, I'm currently completing a Master of IT at UNSW Australia, graduating August 2026 — keeping me sharp on system design, algorithms, and the fundamentals that make better engineers.</p>
       <div class="about__facts">
-        <div class="about__fact"><span>💼</span> 2 years professional software development</div>
-        <div class="about__fact"><span>🎓</span> Master of IT — UNSW, graduating Aug 2026</div>
-        <div class="about__fact"><span>🎨</span> Graphic Design internships</div>
+        <div class="about__fact"><span>💼</span> <span data-key="aboutFact1">2 years professional software development</span></div>
+        <div class="about__fact"><span>🎓</span> <span data-key="aboutFact2">Master of IT — UNSW, graduating Aug 2026</span></div>
+        <div class="about__fact"><span>🎨</span> <span data-key="aboutFact3">Graphic Design internships</span></div>
       </div>
       <a href="#contact" class="btn btn--dark fixwidth" data-key="aboutCta">Let's talk →</a>
     </div>
@@ -551,8 +490,8 @@
   <!-- EXPERIENCE & EDUCATION TIMELINE -->
   <section class="timeline-section" id="experience">
     <div class="timeline-section__header reveal">
-      <span class="eyebrow">Journey so far</span>
-      <h2 class="timeline-section__heading">Experience &amp;<br />Education</h2>
+      <span class="eyebrow" data-key="tlEyebrow">Journey so far</span>
+      <h2 class="timeline-section__heading" data-key="tlHeading">Experience &amp;<br />Education</h2>
     </div>
 
     <div class="timeline">
@@ -560,19 +499,19 @@
       <!-- UNSW Masters — Current -->
       <div class="tl-item reveal">
         <div class="tl-date">
-          <span class="tl-date__range">Sep 2024<br />— Present</span>
-          <span class="tl-date__current">Current</span>
+          <span class="tl-date__range" data-key="tlUNSWDate">Sep 2024<br />— Present</span>
+          <span class="tl-date__current" data-key="tlCurrentLabel">Current</span>
         </div>
         <div class="tl-dot tl-dot--edu"></div>
         <div class="tl-card">
           <div class="tl-card__top">
             <div>
-              <h3 class="tl-card__title">Master of Information Technology</h3>
-              <p class="tl-card__org">University of New South Wales · Sydney, Australia</p>
+              <h3 class="tl-card__title" data-key="tlUNSWTitle">Master of Information Technology</h3>
+              <p class="tl-card__org" data-key="tlUNSWOrg">University of New South Wales · Sydney, Australia</p>
             </div>
-            <span class="tl-card__type tl-card__type--edu">Education</span>
+            <span class="tl-card__type tl-card__type--edu" data-key="tlTypeEdu">Education</span>
           </div>
-          <p class="tl-card__desc">Postgraduate study deepening expertise in system design, algorithms, software architecture, and the engineering fundamentals that underpin scalable, production-grade systems. Graduating August 2026.</p>
+          <p class="tl-card__desc" data-key="tlUNSWDesc">Postgraduate study deepening expertise in system design, algorithms, software architecture, and the engineering fundamentals that underpin scalable, production-grade systems. Graduating August 2026.</p>
           <div class="tl-card__tags">
             <span class="tl-card__tag">System Design</span>
             <span class="tl-card__tag">Algorithms</span>
@@ -585,18 +524,18 @@
       <!-- Deloitte — IT Analyst III -->
       <div class="tl-item reveal">
         <div class="tl-date">
-          <span class="tl-date__range">Jun 2022<br />— Aug 2024</span>
+          <span class="tl-date__range" data-key="tlDeloitteDate">Jun 2022<br />— Aug 2024</span>
         </div>
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-card__top">
             <div>
-              <h3 class="tl-card__title">IT Analyst III — Application Development</h3>
-              <p class="tl-card__org">Deloitte Support Services India Pvt. Ltd. · Bengaluru, India</p>
+              <h3 class="tl-card__title" data-key="tlDeloitteTitle">IT Analyst III — Application Development</h3>
+              <p class="tl-card__org" data-key="tlDeloitteOrg">Deloitte Support Services India Pvt. Ltd. · Bengaluru, India</p>
             </div>
-            <span class="tl-card__type tl-card__type--work">Work</span>
+            <span class="tl-card__type tl-card__type--work" data-key="tlTypeWork">Work</span>
           </div>
-          <p class="tl-card__desc">Engineered scalable React PWA interfaces with Redux, boosting website performance by 30% through code refactoring and asset optimisation, while integrating RESTful APIs and Azure Logic Apps to deliver robust, bug-free deployments.</p>
+          <p class="tl-card__desc" data-key="tlDeloitteDesc">Engineered scalable React PWA interfaces with Redux, boosting website performance by 30% through code refactoring and asset optimisation, while integrating RESTful APIs and Azure Logic Apps to deliver robust, bug-free deployments.</p>
           <div class="tl-card__tags">
             <span class="tl-card__tag">React</span>
             <span class="tl-card__tag">Redux</span>
@@ -615,18 +554,18 @@
       <!-- Deloitte — Intern -->
       <div class="tl-item reveal">
         <div class="tl-date">
-          <span class="tl-date__range">Jun 2022<br />— Aug 2024</span>
+          <span class="tl-date__range" data-key="tlInternDate">Jun 2022<br />— Aug 2024</span>
         </div>
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-card__top">
             <div>
-              <h3 class="tl-card__title">IT Application Development Intern</h3>
-              <p class="tl-card__org">Deloitte Support Services India Pvt. Ltd. · Bengaluru, India</p>
+              <h3 class="tl-card__title" data-key="tlInternTitle">IT Application Development Intern</h3>
+              <p class="tl-card__org" data-key="tlInternOrg">Deloitte Support Services India Pvt. Ltd. · Bengaluru, India</p>
             </div>
-            <span class="tl-card__type tl-card__type--work">Work</span>
+            <span class="tl-card__type tl-card__type--work" data-key="tlTypeWork2">Work</span>
           </div>
-          <p class="tl-card__desc">Built cross-platform PWA interfaces using React JS, Redux, and React Native while spearheading high-fidelity Proofs of Concept to validate new features and reduce onboarding time through comprehensive technical documentation.</p>
+          <p class="tl-card__desc" data-key="tlInternDesc">Built cross-platform PWA interfaces using React JS, Redux, and React Native while spearheading high-fidelity Proofs of Concept to validate new features and reduce onboarding time through comprehensive technical documentation.</p>
           <div class="tl-card__tags">
             <span class="tl-card__tag">React JS</span>
             <span class="tl-card__tag">React Native</span>
@@ -640,19 +579,19 @@
       <!-- VIT Bachelor's -->
       <div class="tl-item reveal">
         <div class="tl-date">
-          <span class="tl-date__range">Jun 2018<br />— May 2022</span>
+          <span class="tl-date__range" data-key="tlVITDate">Jun 2018<br />— May 2022</span>
         </div>
         <div class="tl-dot tl-dot--edu"></div>
         <div class="tl-card">
           <div class="tl-card__top">
             <div>
-              <h3 class="tl-card__title">Bachelor of Technology</h3>
-              <p class="tl-card__org">Vellore Institute of Technology · Vellore, India</p>
+              <h3 class="tl-card__title" data-key="tlVITTitle">Bachelor of Technology</h3>
+              <p class="tl-card__org" data-key="tlVITOrg">Vellore Institute of Technology · Vellore, India</p>
             </div>
-            <span class="tl-card__type tl-card__type--edu">Education</span>
+            <span class="tl-card__type tl-card__type--edu" data-key="tlTypeEdu2">Education</span>
           </div>
-          <p class="tl-card__desc">Four-year undergraduate engineering degree, building a rigorous foundation in computer science, software development, and systems thinking.</p>
-          <div class="tl-card__award">🏅 Graduated with Honours · CGPA 8.72 / 10</div>
+          <p class="tl-card__desc" data-key="tlVITDesc">Four-year undergraduate engineering degree, building a rigorous foundation in computer science, software development, and systems thinking.</p>
+          <div class="tl-card__award" data-key="tlVITAward">🏅 Graduated with Honours · CGPA 8.72 / 10</div>
           <div class="tl-card__tags">
             <span class="tl-card__tag">Computer Science</span>
             <span class="tl-card__tag">Software Engineering</span>
@@ -683,7 +622,6 @@
       <span class="eyebrow" data-key="photoEyebrow">Beyond the screen</span>
       <h2 class="photo__heading" data-key="photoHeading">I also shoot.<br /><em>Film &amp; Digital</em></h2>
     </div>
-    <!-- Info row -->
     <div class="photo__layout">
       <div class="photo__text reveal">
         <p data-key="photoP1">Photography is how I rest my brain and train my eye. I started with a digital camera then moved to a cheap film camera in 2023 and got obsessed — not just with taking pictures, but with the whole process of <em style="color:rgba(245,242,236,.85)">seeing</em>.</p>
@@ -706,80 +644,58 @@
 
     <div class="photo__gallery-wrap reveal">
       <div class="photo__gallery" id="photoGallery">
-
-        <!-- ① Street — wide tile -->
         <div class="photo__tile photo__tile--wide photo__tile--tall">
           <img src="./media/000841960005 (1).jpg" alt="Street photography sample" loading="lazy" />
           <span class="photo__tile-label">Street</span>
         </div>
-
-        <!-- ② Portrait -->
         <div class="photo__tile photo__tile--tall">
           <img src="./media/000873820005 (1).jpg" alt="Portrait sample" loading="lazy" />
           <span class="photo__tile-label">Portrait</span>
         </div>
-
-        <!-- ③ Film grain -->
         <div class="photo__tile">
           <img src="./media/000841960014 (1).jpg" alt="Film photography sample" loading="lazy" />
           <span class="photo__tile-label">Film</span>
         </div>
-
-        <!-- ④ Nature -->
         <div class="photo__tile">
           <img src="./media/000847410004.jpg" alt="Street sample" loading="lazy" />
           <span class="photo__tile-label">Street</span>
         </div>
-
-        <!-- ⑤ Architecture — wide tile -->
         <div class="photo__tile photo__tile--wide">
           <img src="./media/000847410037.jpg" alt="Street sample" loading="lazy" />
           <span class="photo__tile-label">Street</span>
         </div>
-
-        <!-- ⑥ Street night -->
         <div class="photo__tile">
           <img src="./media/000873810025 (1).jpg" alt="Film night sample" loading="lazy" />
           <span class="photo__tile-label">Film</span>
         </div>
-
-        <!-- ⑦ Candid -->
         <div class="photo__tile">
           <img src="./media/000873810022 (1).jpg" alt="Candid sample" loading="lazy" />
           <span class="photo__tile-label">Candid</span>
         </div>
-
-        <!-- ─── HIDDEN (show more) ─── -->
         <div class="photo__tile hidden">
           <img src="./media/000841960022 (1).jpg" alt="Sample photo 8" loading="lazy" />
           <span class="photo__tile-label">Film</span>
         </div>
-
         <div class="photo__tile photo__tile--wide hidden">
           <img src="./media/000806240019.jpg" alt="Sample photo 9" loading="lazy" />
           <span class="photo__tile-label">Nature</span>
         </div>
-
         <div class="photo__tile hidden">
           <img src="./media/000847410033.jpg" alt="Street photo 10" loading="lazy" />
           <span class="photo__tile-label">Street</span>
         </div>
-
         <div class="photo__tile photo__tile--wide photo__tile--tall hidden">
           <img src="./media/000847410024.jpg" alt="Sample photo 8" loading="lazy" />
           <span class="photo__tile-label">Film</span>
         </div>
-
         <div class="photo__tile photo__tile--tall hidden">
           <img src="./media/000873830010 (1).jpg" alt="Sample photo 9" loading="lazy" />
           <span class="photo__tile-label">Nature</span>
         </div>
-
         <div class="photo__tile hidden">
           <img src="./media/000873830002 (1).jpg" alt="Street photo 10" loading="lazy" />
           <span class="photo__tile-label">Street</span>
         </div>
-
         <div class="photo__tile hidden">
           <img src="./media/000873810015 (1).jpg" alt="Street photo 10" loading="lazy" />
           <span class="photo__tile-label">Street</span>
@@ -840,7 +756,38 @@
         aboutHeading: 'Two years shipped.<br/><em>Still levelling up.</em>',
         aboutP1: 'I have 2 years of professional experience building production software — working across frontend development, design systems, and shipping real features to real users. My graphic design background means I care deeply about both how things work and how they look.',
         aboutP2: 'On top of that, I\'m currently completing a Master of IT at UNSW Australia, graduating August 2026 — keeping me sharp on system design, algorithms, and the fundamentals that make better engineers.',
+        aboutFact1: '2 years professional software development',
+        aboutFact2: 'Master of IT — UNSW, graduating Aug 2026',
+        aboutFact3: 'Graphic Design internships',
         aboutCta: 'Let\'s talk →',
+        /* Timeline section */
+        tlEyebrow: 'Journey so far',
+        tlHeading: 'Experience &amp;<br/>Education',
+        tlCurrentLabel: 'Current',
+        tlTypeWork: 'Work', tlTypeWork2: 'Work',
+        tlTypeEdu: 'Education', tlTypeEdu2: 'Education',
+        /* UNSW */
+        tlUNSWDate: 'Sep 2024<br/>— Present',
+        tlUNSWTitle: 'Master of Information Technology',
+        tlUNSWOrg: 'University of New South Wales · Sydney, Australia',
+        tlUNSWDesc: 'Postgraduate study deepening expertise in system design, algorithms, software architecture, and the engineering fundamentals that underpin scalable, production-grade systems. Graduating August 2026.',
+        /* Deloitte Analyst */
+        tlDeloitteDate: 'Jun 2022<br/>— Aug 2024',
+        tlDeloitteTitle: 'IT Analyst III — Application Development',
+        tlDeloitteOrg: 'Deloitte Support Services India Pvt. Ltd. · Bengaluru, India',
+        tlDeloitteDesc: 'Engineered scalable React PWA interfaces with Redux, boosting website performance by 30% through code refactoring and asset optimisation, while integrating RESTful APIs and Azure Logic Apps to deliver robust, bug-free deployments.',
+        /* Deloitte Intern */
+        tlInternDate: 'Jun 2022<br/>— Aug 2024',
+        tlInternTitle: 'IT Application Development Intern',
+        tlInternOrg: 'Deloitte Support Services India Pvt. Ltd. · Bengaluru, India',
+        tlInternDesc: 'Built cross-platform PWA interfaces using React JS, Redux, and React Native while spearheading high-fidelity Proofs of Concept to validate new features and reduce onboarding time through comprehensive technical documentation.',
+        /* VIT */
+        tlVITDate: 'Jun 2018<br/>— May 2022',
+        tlVITTitle: 'Bachelor of Technology',
+        tlVITOrg: 'Vellore Institute of Technology · Vellore, India',
+        tlVITDesc: 'Four-year undergraduate engineering degree, building a rigorous foundation in computer science, software development, and systems thinking.',
+        tlVITAward: '🏅 Graduated with Honours · CGPA 8.72 / 10',
+        /* Rest */
         skillsEyebrow: 'My toolkit', skillsHeading: 'What I<br/>work with',
         skillsSub: 'Two years of real project experience across these tools. Still learning, always shipping.',
         photoEyebrow: 'Beyond the screen', photoHeading: 'I also shoot.<br/><em>Film & Digital</em>',
@@ -862,7 +809,38 @@
         aboutHeading: 'สองปีที่ส่งมอบงาน<br/><em>ยังคงพัฒนาต่อไป</em>',
         aboutP1: 'ฉันมีประสบการณ์ทำงานจริง 2 ปีในการพัฒนาซอฟต์แวร์ production — ทำงานด้าน frontend, design systems และส่งมอบฟีเจอร์จริงให้ผู้ใช้จริง พื้นฐาน Graphic Design ทำให้ฉันใส่ใจทั้งการทำงานและรูปลักษณ์ของสิ่งที่สร้าง',
         aboutP2: 'นอกจากนี้ ฉันกำลังศึกษา Master of IT ที่ UNSW ออสเตรเลีย จบการศึกษาสิงหาคม 2026 — เพื่อเสริมความแข็งแกร่งด้าน system design, algorithms และพื้นฐานที่ทำให้เป็นวิศวกรที่ดีขึ้น',
+        aboutFact1: 'ประสบการณ์พัฒนาซอฟต์แวร์ระดับมืออาชีพ 2 ปี',
+        aboutFact2: 'Master of IT — UNSW จบการศึกษาสิงหาคม 2026',
+        aboutFact3: 'ฝึกงาน Graphic Design',
         aboutCta: 'คุยกันเลย →',
+        /* Timeline section */
+        tlEyebrow: 'เส้นทางของฉัน',
+        tlHeading: 'ประสบการณ์และ<br/>การศึกษา',
+        tlCurrentLabel: 'ปัจจุบัน',
+        tlTypeWork: 'งาน', tlTypeWork2: 'งาน',
+        tlTypeEdu: 'การศึกษา', tlTypeEdu2: 'การศึกษา',
+        /* UNSW */
+        tlUNSWDate: 'ก.ย. 2567<br/>— ปัจจุบัน',
+        tlUNSWTitle: 'Master of Information Technology',
+        tlUNSWOrg: 'มหาวิทยาลัย New South Wales · ซิดนีย์ ออสเตรเลีย',
+        tlUNSWDesc: 'การศึกษาระดับบัณฑิตศึกษาเพื่อเพิ่มพูนความเชี่ยวชาญด้าน system design, algorithms, software architecture และพื้นฐานวิศวกรรมที่ใช้สร้างระบบที่ขยายตัวได้และพร้อม production คาดว่าจบการศึกษาสิงหาคม 2026',
+        /* Deloitte Analyst */
+        tlDeloitteDate: 'มิ.ย. 2565<br/>— ส.ค. 2567',
+        tlDeloitteTitle: 'IT Analyst III — Application Development',
+        tlDeloitteOrg: 'Deloitte Support Services India Pvt. Ltd. · เบงกาลูรู อินเดีย',
+        tlDeloitteDesc: 'พัฒนา React PWA ที่ขยายตัวได้ด้วย Redux ปรับปรุงประสิทธิภาพเว็บไซต์ขึ้น 30% ผ่านการ refactor โค้ดและ optimize assets พร้อมเชื่อมต่อ RESTful APIs และ Azure Logic Apps เพื่อส่งมอบงานที่มีคุณภาพและปราศจากข้อผิดพลาด',
+        /* Deloitte Intern */
+        tlInternDate: 'มิ.ย. 2565<br/>— ส.ค. 2567',
+        tlInternTitle: 'IT Application Development Intern',
+        tlInternOrg: 'Deloitte Support Services India Pvt. Ltd. · เบงกาลูรู อินเดีย',
+        tlInternDesc: 'สร้าง PWA ข้ามแพลตฟอร์มด้วย React JS, Redux และ React Native พร้อมนำ Proof of Concept ความละเอียดสูงมาใช้เพื่อตรวจสอบฟีเจอร์ใหม่ และลดเวลา onboarding ด้วยเอกสารทางเทคนิคที่ครบถ้วน',
+        /* VIT */
+        tlVITDate: 'มิ.ย. 2561<br/>— พ.ค. 2565',
+        tlVITTitle: 'Bachelor of Technology',
+        tlVITOrg: 'Vellore Institute of Technology · เวลลอร์ อินเดีย',
+        tlVITDesc: 'ปริญญาตรีวิศวกรรมศาสตร์ 4 ปี สร้างรากฐานที่แข็งแกร่งด้านวิทยาการคอมพิวเตอร์ การพัฒนาซอฟต์แวร์ และการคิดเชิงระบบ',
+        tlVITAward: '🏅 จบการศึกษาด้วยเกียรตินิยม · CGPA 8.72 / 10',
+        /* Rest */
         skillsEyebrow: 'ชุดเครื่องมือของฉัน', skillsHeading: 'สิ่งที่ฉัน<br/>ทำงานด้วย',
         skillsSub: 'ประสบการณ์จริง 2 ปีกับเครื่องมือเหล่านี้ ยังคงเรียนรู้ ยังคงส่งมอบงาน',
         photoEyebrow: 'นอกจากหน้าจอ', photoHeading: 'ฉันถ่ายภาพด้วย<br/><em>ฟิล์มและดิจิทัล</em>',
@@ -886,7 +864,35 @@
       '[data-key="heroStat3"]': 'heroStat3', '[data-key="heroScroll"]': 'heroScroll',
       '[data-key="aboutTag"]': 'aboutTag', '[data-key="aboutEyebrow"]': 'aboutEyebrow',
       '[data-key="aboutHeading"]': 'aboutHeading', '[data-key="aboutP1"]': 'aboutP1',
-      '[data-key="aboutP2"]': 'aboutP2', '[data-key="aboutCta"]': 'aboutCta',
+      '[data-key="aboutP2"]': 'aboutP2',
+      '[data-key="aboutFact1"]': 'aboutFact1', '[data-key="aboutFact2"]': 'aboutFact2', '[data-key="aboutFact3"]': 'aboutFact3',
+      '[data-key="aboutCta"]': 'aboutCta',
+      /* Timeline */
+      '[data-key="tlEyebrow"]': 'tlEyebrow',
+      '[data-key="tlHeading"]': 'tlHeading',
+      '[data-key="tlCurrentLabel"]': 'tlCurrentLabel',
+      '[data-key="tlTypeWork"]': 'tlTypeWork',
+      '[data-key="tlTypeWork2"]': 'tlTypeWork2',
+      '[data-key="tlTypeEdu"]': 'tlTypeEdu',
+      '[data-key="tlTypeEdu2"]': 'tlTypeEdu2',
+      '[data-key="tlUNSWDate"]': 'tlUNSWDate',
+      '[data-key="tlUNSWTitle"]': 'tlUNSWTitle',
+      '[data-key="tlUNSWOrg"]': 'tlUNSWOrg',
+      '[data-key="tlUNSWDesc"]': 'tlUNSWDesc',
+      '[data-key="tlDeloitteDate"]': 'tlDeloitteDate',
+      '[data-key="tlDeloitteTitle"]': 'tlDeloitteTitle',
+      '[data-key="tlDeloitteOrg"]': 'tlDeloitteOrg',
+      '[data-key="tlDeloitteDesc"]': 'tlDeloitteDesc',
+      '[data-key="tlInternDate"]': 'tlInternDate',
+      '[data-key="tlInternTitle"]': 'tlInternTitle',
+      '[data-key="tlInternOrg"]': 'tlInternOrg',
+      '[data-key="tlInternDesc"]': 'tlInternDesc',
+      '[data-key="tlVITDate"]': 'tlVITDate',
+      '[data-key="tlVITTitle"]': 'tlVITTitle',
+      '[data-key="tlVITOrg"]': 'tlVITOrg',
+      '[data-key="tlVITDesc"]': 'tlVITDesc',
+      '[data-key="tlVITAward"]': 'tlVITAward',
+      /* Skills / Photo / Contact */
       '[data-key="skillsEyebrow"]': 'skillsEyebrow', '[data-key="skillsHeading"]': 'skillsHeading',
       '[data-key="skillsSub"]': 'skillsSub',
       '[data-key="photoEyebrow"]': 'photoEyebrow', '[data-key="photoHeading"]': 'photoHeading',
