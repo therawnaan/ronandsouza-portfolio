@@ -183,6 +183,11 @@
     .skill-row__fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); width: 0; transition: width 1s var(--ease); }
     .skill-row__pct { font-size: 12px; font-weight: 600; color: var(--text-2); text-align: right; }
 
+    /* ── PROJECTS ── */
+    .projects { padding: 120px 48px; border-bottom: 1px solid var(--border); }
+    .projects__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .project-card { display: flex; flex-direction: column; }
+
     /* ── PHOTOGRAPHY ── */
     .photo { padding: 120px 48px; border-bottom: 1px solid var(--border); background: var(--bg-dark); color: var(--text-inv); }
     .photo__header { margin-bottom: 60px; }
@@ -290,6 +295,8 @@
       .tl-card__title { font-size: 19px; }
       .skills { grid-template-columns: 1fr; padding: 80px 24px; gap: 40px; }
       .skill-row { grid-template-columns: 130px 1fr 38px; gap: 12px; padding: 12px 14px; }
+      .projects { padding: 80px 24px; }
+      .projects__grid { grid-template-columns: 1fr; gap: 20px; }
       .photo { padding: 80px 24px; }
       .photo__layout { grid-template-columns: 1fr; gap: 40px; }
       .photo__stats { gap: 24px; }
@@ -344,6 +351,7 @@
       .skill-row__name { grid-column: 1; grid-row: 1; font-size: 13px; }
       .skill-row__track { grid-column: 1; grid-row: 2; }
       .skill-row__pct { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+      .projects { padding: 60px 16px; }
       .photo { padding: 60px 16px; }
       .photo__heading { font-size: clamp(40px, 12vw, 64px); }
       .photo__text p { font-size: 14px; }
@@ -387,6 +395,7 @@
       <a href="#about" class="nav__link">About</a>
       <a href="#experience" class="nav__link">Experience</a>
       <a href="#skills" class="nav__link">Skills</a>
+      <a href="#projects" class="nav__link">Projects</a>
       <a href="#photo" class="nav__link">Photography</a>
       <a href="#contact" class="nav__link">Contact</a>
       <div class="lang-toggle" id="langDesktop">
@@ -405,6 +414,7 @@
     <a href="#about" class="nav__link">About</a>
     <a href="#experience" class="nav__link">Experience</a>
     <a href="#skills" class="nav__link">Skills</a>
+    <a href="#projects" class="nav__link">Projects</a>
     <a href="#photo" class="nav__link">Photography</a>
     <a href="#contact" class="nav__link">Contact</a>
     <div class="lang-toggle" id="langMobile">
@@ -423,13 +433,13 @@
       </span>
     </div>
     <div class="hero__right">
-      <p class="hero__bio" data-key="heroBio">Hi, I'm <strong>Ronan Dsouza</strong> — a software developer (Frontend-focus) with 2 years of hands-on experience designing Figma files and turning them into fast, accessible, pixel-perfect web apps. I care deeply about craft.</p>
+      <p class="hero__bio" data-key="heroBio">Hi, I'm <strong>Ronan Dsouza</strong> — a software developer (Frontend-focus) with 2.5 years of hands-on experience designing Figma files and turning them into fast, accessible, pixel-perfect web apps. I care deeply about craft.</p>
       <div class="hero__actions">
         <a href="#experience" class="btn btn--dark" data-key="heroCta1">My experience</a>
         <a href="#contact" class="btn btn--ghost" data-key="heroCta2">Get in touch</a>
       </div>
       <div class="hero__stats">
-        <div class="hero__stat"><b>2</b><span data-key="heroStat1">Years exp.</span></div>
+        <div class="hero__stat"><b>2.5</b><span data-key="heroStat1">Years exp.</span></div>
         <div class="hero__stat"><b>5+</b><span data-key="heroStat2">Design tools</span></div>
         <div class="hero__stat"><b>∞</b><span data-key="heroStat3">Coffees</span></div>
       </div>
@@ -477,10 +487,10 @@
       <span class="eyebrow" data-key="aboutEyebrow">Who I am</span>
       <h2 class="about__heading" data-key="aboutHeading">Two years shipped.<br /><em>Still levelling up.</em></h2>
       <p data-key="aboutP1">I have 2 years of professional experience building production software — working across frontend development, design systems, and shipping real features to real users. My graphic design background means I care deeply about both how things work and how they look.</p>
-      <p data-key="aboutP2">On top of that, I'm currently completing a Master of IT at UNSW Australia, graduating August 2026 — keeping me sharp on system design, algorithms, and the fundamentals that make better engineers.</p>
+      <p data-key="aboutP2">On top of that, I completed a Master of IT at UNSW Australia in August 2026 — sharpening my system design, algorithms, and the fundamentals that make better engineers.</p>
       <div class="about__facts">
-        <div class="about__fact"><span>💼</span> <span data-key="aboutFact1">2 years professional software development</span></div>
-        <div class="about__fact"><span>🎓</span> <span data-key="aboutFact2">Master of IT — UNSW, graduating Aug 2026</span></div>
+        <div class="about__fact"><span>💼</span> <span data-key="aboutFact1">2.5 years professional software development</span></div>
+        <div class="about__fact"><span>🎓</span> <span data-key="aboutFact2">Master of IT — UNSW, graduated Aug 2026</span></div>
         <div class="about__fact"><span>🎨</span> <span data-key="aboutFact3">Graphic Design internships</span></div>
       </div>
       <a href="#contact" class="btn btn--dark fixwidth" data-key="aboutCta">Let's talk →</a>
@@ -499,8 +509,7 @@
       <!-- UNSW Masters — Current -->
       <div class="tl-item reveal">
         <div class="tl-date">
-          <span class="tl-date__range" data-key="tlUNSWDate">Sep 2024<br />— Present</span>
-          <span class="tl-date__current" data-key="tlCurrentLabel">Current</span>
+          <span class="tl-date__range" data-key="tlUNSWDate">Sep 2024<br />— Aug 2026</span>
         </div>
         <div class="tl-dot tl-dot--edu"></div>
         <div class="tl-card">
@@ -511,7 +520,8 @@
             </div>
             <span class="tl-card__type tl-card__type--edu" data-key="tlTypeEdu">Education</span>
           </div>
-          <p class="tl-card__desc" data-key="tlUNSWDesc">Postgraduate study deepening expertise in system design, algorithms, software architecture, and the engineering fundamentals that underpin scalable, production-grade systems. Graduating August 2026.</p>
+          <p class="tl-card__desc" data-key="tlUNSWDesc">Postgraduate study deepening expertise in system design, algorithms, software architecture, and the engineering fundamentals that underpin scalable, production-grade systems. Graduated August 2026.</p>
+          <div class="tl-card__award" data-key="tlUNSWWam">📊 WAM: 73.625%</div>
           <div class="tl-card__tags">
             <span class="tl-card__tag">System Design</span>
             <span class="tl-card__tag">Algorithms</span>
@@ -613,6 +623,98 @@
     </div>
     <div class="skills__right reveal">
       <div class="skills__bars" id="skillBars"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="timeline-section__header reveal">
+      <span class="eyebrow" data-key="projectsEyebrow">Selected work</span>
+      <h2 class="timeline-section__heading" data-key="projectsHeading">Projects &amp;<br />Research</h2>
+    </div>
+    <div class="projects__grid">
+
+      <div class="tl-card project-card reveal">
+        <div class="tl-card__top">
+          <h3 class="tl-card__title">Aerial Forest Image Segmentation using Deep Learning Models</h3>
+          <span class="tl-card__type tl-card__type--edu">Research Paper</span>
+        </div>
+        <p class="tl-card__desc">Monitoring forest health through dead-tree detection is vital for assessing ecological stability and wildfire risk. This paper presents a segmentation pipeline combining a vegetation-index-enhanced YOLOv11 variant, DeepLabv3, and a LoRA fine-tuned SAM2 (Segment Anything Model 2) to independently detect and segment dead trees from RGB and NIR aerial imagery. Models were evaluated against custom-labelled public data using Intersection over Union (IoU), showing robust performance under complex environmental conditions and pointing toward a scalable approach for forest health monitoring.</p>
+        <div class="tl-card__tags">
+          <span class="tl-card__tag">YOLOv11</span>
+          <span class="tl-card__tag">DeepLabv3</span>
+          <span class="tl-card__tag">SAM2</span>
+          <span class="tl-card__tag">LoRA Fine-Tuning</span>
+          <span class="tl-card__tag">Computer Vision</span>
+          <span class="tl-card__tag">Remote Sensing</span>
+        </div>
+      </div>
+
+      <div class="tl-card project-card reveal">
+        <div class="tl-card__top">
+          <h3 class="tl-card__title">Airbnb Clone</h3>
+          <span class="tl-card__type tl-card__type--work">Project</span>
+        </div>
+        <p class="tl-card__desc">A full-stack replica of Airbnb built to practise designing and consuming APIs end-to-end, covering listings, search, and booking flows behind a responsive front-end.</p>
+        <div class="tl-card__tags">
+          <span class="tl-card__tag">Full-Stack</span>
+          <span class="tl-card__tag">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="tl-card project-card reveal">
+        <div class="tl-card__top">
+          <h3 class="tl-card__title">Optimising Sustainable Building Design Using AI-Based Surrogate Models</h3>
+          <span class="tl-card__type tl-card__type--edu">Research Paper</span>
+        </div>
+        <p class="tl-card__desc">A research proposal exploring AI-based surrogate models as a faster alternative to computationally expensive building performance simulations. The project investigates whether machine learning models trained on simulation data can retain high prediction accuracy while integrating with optimisation algorithms to identify energy-efficient design strategies for buildings in urban environments — aiming to make iterative sustainable design more practical and scalable for architects and engineers.</p>
+        <div class="tl-card__tags">
+          <span class="tl-card__tag">Machine Learning</span>
+          <span class="tl-card__tag">Surrogate Modelling</span>
+          <span class="tl-card__tag">Optimisation Algorithms</span>
+          <span class="tl-card__tag">Sustainability</span>
+        </div>
+      </div>
+
+      <div class="tl-card project-card reveal">
+        <div class="tl-card__top">
+          <h3 class="tl-card__title">Beyond Deepfakes: AI, Digital Trust and the Future of Identity Verification</h3>
+          <span class="tl-card__type tl-card__type--edu">Research Paper</span>
+        </div>
+        <p class="tl-card__desc">An education workbook and research project examining how generative AI enables convincing deepfakes and impersonation attacks, and how digital trust and identity verification need to adapt in response. Combining literature review, threat modelling, and real-world case-study analysis, the workbook teaches everyday tech users to recognise warning signs and apply layered verification practices, with effectiveness measured through pre/post-training assessment and participant feedback.</p>
+        <div class="tl-card__tags">
+          <span class="tl-card__tag">GenAI</span>
+          <span class="tl-card__tag">Threat Modelling</span>
+          <span class="tl-card__tag">Cybersecurity Education</span>
+          <span class="tl-card__tag">Digital Trust</span>
+        </div>
+      </div>
+
+      <div class="tl-card project-card reveal">
+        <div class="tl-card__top">
+          <h3 class="tl-card__title">News Recommender System</h3>
+          <span class="tl-card__type tl-card__type--work">Project</span>
+        </div>
+        <p class="tl-card__desc">A personalised news recommender system tackling information overload by ranking candidate articles against an individual reader's click history, rather than treating recommendation as a simple sorting task. The system accounts for fast-decaying article relevance and shifting reader interests, including handling newly published articles with no click history yet.</p>
+        <div class="tl-card__tags">
+          <span class="tl-card__tag">Recommender Systems</span>
+          <span class="tl-card__tag">Machine Learning</span>
+          <span class="tl-card__tag">Personalisation</span>
+        </div>
+      </div>
+
+      <div class="tl-card project-card reveal">
+        <div class="tl-card__top">
+          <h3 class="tl-card__title">Jira Backlog Review — Forge App</h3>
+          <span class="tl-card__type tl-card__type--work">Capstone Project</span>
+        </div>
+        <p class="tl-card__desc">A COMP9900 capstone project building a complete Atlassian Forge app that gives teams an interactive way to review, prioritise, and clean up cluttered Jira backlogs — developed with an Atlassian industry mentor as client and installable on any Atlassian site.</p>
+        <div class="tl-card__tags">
+          <span class="tl-card__tag">Atlassian Forge</span>
+          <span class="tl-card__tag">Jira API</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -749,17 +851,21 @@
     const T = {
       en: {
         heroStatus: 'Open to work',
-        heroBio: 'Hi, I\'m <strong>Ronan Dsouza</strong> — a software developer (Frontend-focus) with 2 years of hands-on experience designing Figma files and turning them into fast, accessible, pixel-perfect web apps. I care deeply about craft.',
+        heroBio: 'Hi, I\'m <strong>Ronan Dsouza</strong> — a software developer (Frontend-focus) with 2.5 years of hands-on experience designing Figma files and turning them into fast, accessible, pixel-perfect web apps. I care deeply about craft.',
         heroCta1: 'My experience', heroCta2: 'Get in touch',
         heroStat1: 'Years exp.', heroStat2: 'Design tools', heroStat3: 'Coffees', heroScroll: 'scroll',
         aboutTag: 'Available now', aboutEyebrow: 'Who I am',
         aboutHeading: 'Two years shipped.<br/><em>Still levelling up.</em>',
-        aboutP1: 'I have 2 years of professional experience building production software — working across frontend development, design systems, and shipping real features to real users. My graphic design background means I care deeply about both how things work and how they look.',
-        aboutP2: 'On top of that, I\'m currently completing a Master of IT at UNSW Australia, graduating August 2026 — keeping me sharp on system design, algorithms, and the fundamentals that make better engineers.',
-        aboutFact1: '2 years professional software development',
-        aboutFact2: 'Master of IT — UNSW, graduating Aug 2026',
+        aboutP1: 'I have 2.5 years of professional experience building production software — working across frontend development, design systems, and shipping real features to real users. My graphic design background means I care deeply about both how things work and how they look.',
+        aboutP2: 'On top of that, I completed a Master of IT at UNSW Australia in August 2026 — sharpening my system design, algorithms, and the fundamentals that make better engineers.',
+        aboutFact1: '2.5 years professional software development',
+        aboutFact2: 'Master of IT — UNSW, graduated Aug 2026',
         aboutFact3: 'Graphic Design internships',
+        aboutFact4: 'WAM: 73.625%',
         aboutCta: 'Let\'s talk →',
+        projectsEyebrow: 'Selected work',
+        projectsHeading: 'Projects &amp;<br/>Research',
+        navProjects: 'Projects',
         /* Timeline section */
         tlEyebrow: 'Journey so far',
         tlHeading: 'Experience &amp;<br/>Education',
@@ -767,10 +873,11 @@
         tlTypeWork: 'Work', tlTypeWork2: 'Work',
         tlTypeEdu: 'Education', tlTypeEdu2: 'Education',
         /* UNSW */
-        tlUNSWDate: 'Sep 2024<br/>— Present',
+        tlUNSWDate: 'Sep 2024<br/>— Aug 2026',
         tlUNSWTitle: 'Master of Information Technology',
         tlUNSWOrg: 'University of New South Wales · Sydney, Australia',
-        tlUNSWDesc: 'Postgraduate study deepening expertise in system design, algorithms, software architecture, and the engineering fundamentals that underpin scalable, production-grade systems. Graduating August 2026.',
+        tlUNSWDesc: 'Postgraduate study deepening expertise in system design, algorithms, software architecture, and the engineering fundamentals that underpin scalable, production-grade systems. Graduated August 2026.',
+        tlUNSWWam: '📊 WAM: 73.625%',
         /* Deloitte Analyst */
         tlDeloitteDate: 'Jun 2022<br/>— Aug 2024',
         tlDeloitteTitle: 'IT Analyst III — Application Development',
@@ -802,17 +909,21 @@
       },
       th: {
         heroStatus: 'เปิดรับโอกาสใหม่',
-        heroBio: 'สวัสดี ฉันชื่อ <strong>Ronan Dsouza</strong> — นักพัฒนาซอฟต์แวร์ (เน้น Frontend) ที่มีประสบการณ์ทำงานจริง 2 ปี พร้อมพื้นฐาน Graphic Design ฉันใส่ใจในทุกรายละเอียดของงาน',
+        heroBio: 'สวัสดี ฉันชื่อ <strong>Ronan Dsouza</strong> — นักพัฒนาซอฟต์แวร์ (เน้น Frontend) ที่มีประสบการณ์ทำงานจริง 2.5 ปี พร้อมพื้นฐาน Graphic Design ฉันใส่ใจในทุกรายละเอียดของงาน',
         heroCta1: 'ประสบการณ์ของฉัน', heroCta2: 'ติดต่อฉัน',
         heroStat1: 'ปีประสบการณ์', heroStat2: 'เครื่องมือดีไซน์', heroStat3: 'กาแฟ', heroScroll: 'เลื่อน',
         aboutTag: 'พร้อมรับงานทันที', aboutEyebrow: 'ฉันคือใคร',
         aboutHeading: 'สองปีที่ส่งมอบงาน<br/><em>ยังคงพัฒนาต่อไป</em>',
-        aboutP1: 'ฉันมีประสบการณ์ทำงานจริง 2 ปีในการพัฒนาซอฟต์แวร์ production — ทำงานด้าน frontend, design systems และส่งมอบฟีเจอร์จริงให้ผู้ใช้จริง พื้นฐาน Graphic Design ทำให้ฉันใส่ใจทั้งการทำงานและรูปลักษณ์ของสิ่งที่สร้าง',
-        aboutP2: 'นอกจากนี้ ฉันกำลังศึกษา Master of IT ที่ UNSW ออสเตรเลีย จบการศึกษาสิงหาคม 2026 — เพื่อเสริมความแข็งแกร่งด้าน system design, algorithms และพื้นฐานที่ทำให้เป็นวิศวกรที่ดีขึ้น',
-        aboutFact1: 'ประสบการณ์พัฒนาซอฟต์แวร์ระดับมืออาชีพ 2 ปี',
-        aboutFact2: 'Master of IT — UNSW จบการศึกษาสิงหาคม 2026',
+        aboutP1: 'ฉันมีประสบการณ์ทำงานจริง 2.5 ปีในการพัฒนาซอฟต์แวร์ production — ทำงานด้าน frontend, design systems และส่งมอบฟีเจอร์จริงให้ผู้ใช้จริง พื้นฐาน Graphic Design ทำให้ฉันใส่ใจทั้งการทำงานและรูปลักษณ์ของสิ่งที่สร้าง',
+        aboutP2: 'นอกจากนี้ ฉันสำเร็จการศึกษา Master of IT ที่ UNSW ออสเตรเลีย เมื่อสิงหาคม 2026 — เสริมความแข็งแกร่งด้าน system design, algorithms และพื้นฐานที่ทำให้เป็นวิศวกรที่ดีขึ้น',
+        aboutFact1: 'ประสบการณ์พัฒนาซอฟต์แวร์ระดับมืออาชีพ 2.5 ปี',
+        aboutFact2: 'Master of IT — UNSW สำเร็จการศึกษาสิงหาคม 2026',
         aboutFact3: 'ฝึกงาน Graphic Design',
+        aboutFact4: 'WAM: 73.625%',
         aboutCta: 'คุยกันเลย →',
+        projectsEyebrow: 'ผลงานที่คัดสรร',
+        projectsHeading: 'โปรเจกต์และ<br/>งานวิจัย',
+        navProjects: 'โปรเจกต์',
         /* Timeline section */
         tlEyebrow: 'เส้นทางของฉัน',
         tlHeading: 'ประสบการณ์และ<br/>การศึกษา',
@@ -820,10 +931,11 @@
         tlTypeWork: 'งาน', tlTypeWork2: 'งาน',
         tlTypeEdu: 'การศึกษา', tlTypeEdu2: 'การศึกษา',
         /* UNSW */
-        tlUNSWDate: 'ก.ย. 2567<br/>— ปัจจุบัน',
+        tlUNSWDate: 'ก.ย. 2567<br/>— ส.ค. 2569',
         tlUNSWTitle: 'Master of Information Technology',
         tlUNSWOrg: 'มหาวิทยาลัย New South Wales · ซิดนีย์ ออสเตรเลีย',
-        tlUNSWDesc: 'การศึกษาระดับบัณฑิตศึกษาเพื่อเพิ่มพูนความเชี่ยวชาญด้าน system design, algorithms, software architecture และพื้นฐานวิศวกรรมที่ใช้สร้างระบบที่ขยายตัวได้และพร้อม production คาดว่าจบการศึกษาสิงหาคม 2026',
+        tlUNSWDesc: 'การศึกษาระดับบัณฑิตศึกษาเพื่อเพิ่มพูนความเชี่ยวชาญด้าน system design, algorithms, software architecture และพื้นฐานวิศวกรรมที่ใช้สร้างระบบที่ขยายตัวได้และพร้อม production จบการศึกษาสิงหาคม 2026',
+        tlUNSWWam: '📊 WAM: 73.625%',
         /* Deloitte Analyst */
         tlDeloitteDate: 'มิ.ย. 2565<br/>— ส.ค. 2567',
         tlDeloitteTitle: 'IT Analyst III — Application Development',
@@ -866,7 +978,10 @@
       '[data-key="aboutHeading"]': 'aboutHeading', '[data-key="aboutP1"]': 'aboutP1',
       '[data-key="aboutP2"]': 'aboutP2',
       '[data-key="aboutFact1"]': 'aboutFact1', '[data-key="aboutFact2"]': 'aboutFact2', '[data-key="aboutFact3"]': 'aboutFact3',
+      '[data-key="aboutFact4"]': 'aboutFact4',
       '[data-key="aboutCta"]': 'aboutCta',
+      '[data-key="projectsEyebrow"]': 'projectsEyebrow',
+      '[data-key="projectsHeading"]': 'projectsHeading',
       /* Timeline */
       '[data-key="tlEyebrow"]': 'tlEyebrow',
       '[data-key="tlHeading"]': 'tlHeading',
@@ -879,6 +994,7 @@
       '[data-key="tlUNSWTitle"]': 'tlUNSWTitle',
       '[data-key="tlUNSWOrg"]': 'tlUNSWOrg',
       '[data-key="tlUNSWDesc"]': 'tlUNSWDesc',
+      '[data-key="tlUNSWWam"]': 'tlUNSWWam',
       '[data-key="tlDeloitteDate"]': 'tlDeloitteDate',
       '[data-key="tlDeloitteTitle"]': 'tlDeloitteTitle',
       '[data-key="tlDeloitteOrg"]': 'tlDeloitteOrg',
@@ -916,6 +1032,7 @@
       document.querySelectorAll('.nav__link[href="#about"]').forEach(e => e.textContent = t.navAbout);
       document.querySelectorAll('.nav__link[href="#experience"]').forEach(e => e.textContent = t.navExp);
       document.querySelectorAll('.nav__link[href="#skills"]').forEach(e => e.textContent = t.navSkills);
+      document.querySelectorAll('.nav__link[href="#projects"]').forEach(e => e.textContent = t.navProjects);
       document.querySelectorAll('.nav__link[href="#photo"]').forEach(e => e.textContent = t.navPhoto);
       document.querySelectorAll('.nav__link[href="#contact"]').forEach(e => e.textContent = t.navContact);
       document.querySelectorAll('#navCta').forEach(e => e.textContent = t.navHire);
